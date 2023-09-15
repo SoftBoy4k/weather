@@ -85,9 +85,50 @@ export const getSvg = (icon: string) => {
             return fct_ts_ra;
         case "bkn_d":
             return bkn_d;
-        // case "":
-        //     return test;
-
+        case "fct_sn":
+            return fct_sn;
+        case "fct_ra":
+            return fct_ra;
+        case "fct_ra_sn":
+            return fct_ra_sn;
+        case "fct_+sn":
+            return fct_psn;
+        case "fct_+ra":
+            return fct_pra;
+        case "fct_-sn":
+            return fct_msn;
+        case "fct_-ra":
+            return fct_mra;
+        case "bkn_sn_n":
+            return bkn_sn_n;
+        case "bkn_sn_d":
+            return bkn_sn_d;
+        case "bl":
+            return bl;
+        case "bl-":
+            return blm;
+        case "bkn_ra_n":
+            return bkn_ra_n;
+        case "bkn_ra_d":
+            return bkn_ra_d;
+        case "bkn_n":
+            return bkn_n;
+        case "bkn_+sn_n":
+            return bkn_psn_n;
+        case "bkn_+sn_d":
+            return bkn_psn_d;
+        case "bkn_+ra_n":
+            return bkn_pra_n;
+        case "bkn_+ra_d":
+            return bkn_pra_d;
+        case "bkn_-sn_n":
+            return bkn_msn_n;
+        case "bkn_-sn_d":
+            return bkn_msn_d;
+        case "bkn_-ra_n":
+            return bkn_mra_n;
+        case "bkn_-ra_d":
+            return bkn_mra_d;
 
         default:
             return ovc_mra
