@@ -15,6 +15,7 @@
 
 body {
   background-color: var(--main-bg-color);
+  overflow: hidden;
 }
 
 .app {
@@ -33,6 +34,34 @@ body {
   bottom: 20px;
   right: 30px;
 }
+
+/* ========== RAIN ANIMATION ========== */
+
+.bg-rain {
+  position: absolute;
+  height: 20px;
+  opacity: 0.5;
+  top: 0;
+  margin-top: -200px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(transparent, #3953fd);
+  animation: animate 5s linear infinite;
+  z-index: -10;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-200);
+  }
+  100% {
+    transform: translateY(calc(100vh + 200px));
+  }
+}
+
+/* ========== /RAIN ANIMATION ========== */
+
+
 
 /* ========== HEADER ========== */
 

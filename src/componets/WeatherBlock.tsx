@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { getSvg } from "./getSvg";
+import { startAnimation } from "./Animations/startAnimation";
 
 
 interface WeatherBlockProps {
@@ -39,6 +40,10 @@ const WeatherBlock = ({id}: WeatherBlockProps) => {
 
     fetchWeatherData();
   }, [id]);
+
+  useEffect(() => {
+    startAnimation(weatherData.icon);
+  }, [weatherData.icon])
 
   if (!weatherData) {
     return <div>Loading...</div>;
