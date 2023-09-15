@@ -1,3 +1,4 @@
+import { bgClouds } from "./bgClouds"
 import { bgRain } from "./bgRain"
 import { bgSnow } from "./bgSnow";
 
@@ -10,5 +11,7 @@ export const startAnimation = (iconName:string): void => {
         bgRain();
     } else if (regexSnow.test(iconName)) {
         bgSnow();
+    } else {
+        bgClouds();
     }
 }
