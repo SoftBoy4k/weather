@@ -63,6 +63,25 @@ body {
 
 
 
+/* ========== SNOW ANIMATION ========== */
+
+.bg-snow {
+  position: absolute;
+  height: 10px;
+  opacity: 0.5;
+  top: 0;
+  margin-top: -200px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: linear-gradient(transparent, #fff);
+  animation: animate 10s linear infinite;
+  z-index: -10;
+}
+
+/* ========== /SNOW ANIMATION ========== */
+
+
+
 /* ========== HEADER ========== */
 
 .header {
