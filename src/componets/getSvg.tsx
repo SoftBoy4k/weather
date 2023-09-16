@@ -131,6 +131,6 @@ export const getSvg = (icon: string) => {
             return bkn_mra_d;
 
         default:
-            return ovc_mra
+            return skc_d
     }
 }
