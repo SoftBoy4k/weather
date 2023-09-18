@@ -1,8 +1,9 @@
 const quantity: number = 200;
 const body: HTMLBodyElement | null = document.querySelector("body");
-let index: number = 0;
 
 export function bgRain():void {
+    let index: number = 0;
+    
     while (index < quantity) {
         const drop = document.createElement('div');
         const size: number = Math.random() * 2;

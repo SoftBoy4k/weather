@@ -1,26 +1,22 @@
-import { bgClouds } from "./bgClouds"
-import { bgRain } from "./bgRain"
-import { bgSnow } from "./bgSnow";
-import { finishAllAnimations } from "./finishAllAnimations";
+import { cloudsAnimation, rainAnimation, snowAnimation } from "./animations";
 
-let currentAnimation = "";
 
 export const startAnimation = (iconName:string): void => {
 
     const regexRain = /ra/;
     const regexSnow = /sn/;
 
-    if (regexRain.test(iconName) && currentAnimation !== "rain") {
-        currentAnimation = "rain";
-        finishAllAnimations();
-        bgRain();
-    } else if (regexSnow.test(iconName) && currentAnimation !== "snow") {
-        currentAnimation = "snow";
-        finishAllAnimations();
-        bgSnow();
-    } else if (currentAnimation !== "clouds") {
-        currentAnimation = "clouds";
-        finishAllAnimations();
-        bgClouds();
+    if (regexRain.test(iconName)) {
+        rainAnimation.startAnimation();
+        snowAnimation.finishRainAnimation();
+        cloudsAnimation.finishRainAnimation();
+    } else if (regexSnow.test(iconName)) {
+        snowAnimation.startAnimation();
+        rainAnimation.finishRainAnimation();
+        cloudsAnimation.finishRainAnimation();
+    } else {
+        cloudsAnimation.startAnimation();
+        rainAnimation.finishRainAnimation();
+        snowAnimation.finishRainAnimation();
     }
 }

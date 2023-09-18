@@ -1,12 +1,12 @@
 import NextWeatherBlock from "./NextWeatherBlock"
-import WeatherBlock from "./WeatherBlock"
 import { useDispatch, useSelector } from "react-redux"
 import type { Dispatch } from 'redux'
 import { IStateCard, nextCard, prevCard } from "../store/weatherCard.slice"
+import { Weather } from "./Weather"
 
 const MenuWeather = () => {
 
-  const card: number = useSelector((state: IStateCard) => state.weatherCard.card);
+  const cardId: number = useSelector((state: IStateCard) => state.weatherCard.card);
 
   const dispatch: Dispatch = useDispatch();
 
@@ -16,9 +16,9 @@ const MenuWeather = () => {
 
   return (
     <div className="weather-menu">
-        <NextWeatherBlock direction='left' hidden={card === 0} clickHandler = {prevWeatherCard}/>
-        <WeatherBlock id={card}/>
-        <NextWeatherBlock direction='right'hidden={card === 6} clickHandler = {nextWeatherCard}/>
+        <NextWeatherBlock direction='left' hidden={cardId === 0} clickHandler = {prevWeatherCard}/>
+        <Weather cardId={cardId}/>
+        <NextWeatherBlock direction='right'hidden={cardId === 6} clickHandler = {nextWeatherCard}/>
     </div>
   )
 }
